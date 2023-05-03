@@ -12,11 +12,13 @@ namespace ResumeProject.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class DbResumeEntities : DbContext
+    public partial class DbResumeEntities2 : DbContext
     {
-        public DbResumeEntities()
-            : base("name=DbResumeEntities")
+        public DbResumeEntities2()
+            : base("name=DbResumeEntities2")
         {
         }
     
@@ -30,5 +32,13 @@ namespace ResumeProject.Models
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblSkill> TblSkill { get; set; }
         public virtual DbSet<TblTechnology> TblTechnology { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<TblCategory> TblCategory { get; set; }
+        public virtual DbSet<TblService> TblService { get; set; }
+    
+        public virtual ObjectResult<Nullable<int>> CountProjeTalebi()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("CountProjeTalebi");
+        }
     }
 }

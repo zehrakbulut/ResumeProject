@@ -17,8 +17,10 @@ namespace ResumeProject.Models
         public int ContactID { get; set; }
         public string NameSurname { get; set; }
         public string Mail { get; set; }
-        public string Subject { get; set; }
+        public Nullable<int> Subject { get; set; }
         public string Message { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+    
+        public virtual TblCategory TblCategory { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ResumeProject.Controllers
 {
     public class SkillController : Controller
     {
-        DbResumeEntities db=new DbResumeEntities();
+        DbResumeEntities2 db=new DbResumeEntities2();
 
         public ActionResult Index()
         {

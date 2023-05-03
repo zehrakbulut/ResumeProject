@@ -4,12 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1ab8d9adfeff4bd8af748a3ac5017a42" Name="Diagram1">
+      <Diagram DiagramId="bd76818ccd3f4888906d0c51dd834c79" Name="Diagram1" ZoomLevel="99">
         <EntityTypeShape EntityType="DbResumeModel.TblContact" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbResumeModel.TblProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbResumeModel.TblProject" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbResumeModel.TblSkill" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbResumeModel.TblTechnology" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbResumeModel.sysdiagrams" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DbResumeModel.TblCategory" Width="1.5" PointX="0.75" PointY="8.125" />
+        <AssociationConnector Association="DbResumeModel.FK_TblContact_TblCategory" />
+        <EntityTypeShape EntityType="DbResumeModel.TblService" Width="1.5" PointX="5.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
